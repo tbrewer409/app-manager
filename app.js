@@ -10,8 +10,9 @@ app.get('/stop_a1111', (req, res) => {
         if (error) {
             console.error(`Error stopping A1111: ${error}`);
         }
-        res.send('Stopped A1111 successfully!');
     });
+
+    res.send('Stopped A1111 successfully!');
 });
 
 app.get('/start_a1111', (req, res) => {
@@ -19,8 +20,9 @@ app.get('/start_a1111', (req, res) => {
         if (error) {
             console.error(`Error starting A1111: ${error}`);
         }
-        res.send('Started A1111 successfully!');
     });
+
+    res.send('Started A1111 successfully!');
 });
 
 app.get('/stop_kohya', (req, res) => {
@@ -28,8 +30,9 @@ app.get('/stop_kohya', (req, res) => {
         if (error) {
             console.error(`Error stopping Kohya_ss: ${error}`);
         }
-        res.send('Stopped Kohya_ss successfully!');
     });
+
+    res.send('Stopped Kohya_ss successfully!');
 });
 
 app.get('/start_kohya', (req, res) => {
@@ -37,8 +40,9 @@ app.get('/start_kohya', (req, res) => {
         if (error) {
             console.error(`Error starting Kohya_ss: ${error}`);
         }
-        res.send('Started Kohya_ss successfully!');
     });
+
+    res.send('Started Kohya_ss successfully!');
 });
 
 app.get('/stop_comfyui', (req, res) => {
@@ -46,8 +50,9 @@ app.get('/stop_comfyui', (req, res) => {
         if (error) {
             console.error(`Error stopping ComfyUI: ${error}`);
         }
-        res.send('Stopped ComfyUI successfully!');
     });
+
+    res.send('Stopped ComfyUI successfully!');
 });
 
 app.get('/start_comfyui', (req, res) => {
@@ -55,8 +60,9 @@ app.get('/start_comfyui', (req, res) => {
         if (error) {
             console.error(`Error starting ComfyUI: ${error}`);
         }
-        res.send('Started ComfyUI successfully!');
     });
+
+    res.send('Started ComfyUI successfully!');
 });
 
 app.listen(PORT, '0.0.0.0', () => {
