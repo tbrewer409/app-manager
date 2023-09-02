@@ -16,7 +16,7 @@ app.get('/stop_a1111', (req, res) => {
 });
 
 app.get('/start_a1111', (req, res) => {
-    exec('scripts/start_a1111.sh', (error, stdout, stderr) => {
+    exec('scripts/start_a1111.sh &', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error starting A1111: ${error}`);
             return res.sendStatus(500);
@@ -36,7 +36,7 @@ app.get('/stop_kohya', (req, res) => {
 });
 
 app.get('/start_kohya', (req, res) => {
-    exec('scripts/start_kohya.sh', (error, stdout, stderr) => {
+    exec('scripts/start_kohya.sh &', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error starting Kohya_ss: ${error}`);
             return res.sendStatus(500);
@@ -56,7 +56,7 @@ app.get('/stop_comfyui', (req, res) => {
 });
 
 app.get('/start_comfyui', (req, res) => {
-    exec('scripts/start_comfyui.sh', (error, stdout, stderr) => {
+    exec('scripts/start_comfyui.sh &', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error starting ComfyUI: ${error}`);
             return res.sendStatus(500);
