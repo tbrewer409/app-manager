@@ -16,7 +16,7 @@ app.get('/stop_a1111', (req, res) => {
 });
 
 app.get('/start_a1111', (req, res) => {
-    exec('cd /workspace/stable-diffusion-webui && nohup ./webui.sh -f > /workspace/logs/webui.log 2>&1 &', (error, stdout, stderr) => {
+    exec('scripts/start_a1111.sh', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error starting A1111: ${error}`);
             return res.sendStatus(500);
@@ -36,7 +36,7 @@ app.get('/stop_kohya', (req, res) => {
 });
 
 app.get('/start_kohya', (req, res) => {
-    exec('cd /workspace/kohya_ss && nohup ./gui.sh --listen 0.0.0.0 --server_port 3011 --headless > /workspace/logs/kohya_ss.log 2>&1 &', (error, stdout, stderr) => {
+    exec('scripts/start_kohya.sh', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error starting Kohya_ss: ${error}`);
             return res.sendStatus(500);
@@ -56,7 +56,7 @@ app.get('/stop_comfyui', (req, res) => {
 });
 
 app.get('/start_comfyui', (req, res) => {
-    exec('cd /workspace/ComfyUI && source venv/bin/activate && python3 main.py --listen 0.0.0.0 --port 3021 > /workspace/logs/comfyui.log 2>&1 &', (error, stdout, stderr) => {
+    exec('scripts/start_comfyui.sh', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error starting ComfyUI: ${error}`);
             return res.sendStatus(500);
