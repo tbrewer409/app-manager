@@ -46,7 +46,7 @@ app.get('/start_kohya', (req, res) => {
 });
 
 app.get('/stop_comfyui', (req, res) => {
-    exec('fuser -k 3011/tcp', (error, stdout, stderr) => {
+    exec('fuser -k 3021/tcp', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error stopping ComfyUI: ${error}`);
             return res.sendStatus(500);
