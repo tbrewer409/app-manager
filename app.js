@@ -6,7 +6,7 @@ const PORT = 8000;
 app.use(express.static('public'));
 
 app.get('/stop_a1111', (req, res) => {
-    exec('fuser -k 3001/tcp', (error, stdout, stderr) => {
+    exec('scripts/stop_a1111.sh &', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error stopping A1111: ${error}`);
         }
@@ -26,7 +26,7 @@ app.get('/start_a1111', (req, res) => {
 });
 
 app.get('/stop_kohya', (req, res) => {
-    exec('fuser -k 3011/tcp', (error, stdout, stderr) => {
+    exec('scripts/stop_kohya.sh &', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error stopping Kohya_ss: ${error}`);
         }
@@ -46,7 +46,7 @@ app.get('/start_kohya', (req, res) => {
 });
 
 app.get('/stop_comfyui', (req, res) => {
-    exec('fuser -k 3021/tcp', (error, stdout, stderr) => {
+    exec('scripts/start_comfyui.sh &', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error stopping ComfyUI: ${error}`);
         }
