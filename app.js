@@ -46,7 +46,7 @@ app.get('/start_kohya', (req, res) => {
 });
 
 app.get('/stop_comfyui', (req, res) => {
-    exec('scripts/start_comfyui.sh &', (error, stdout, stderr) => {
+    exec('scripts/stop_comfyui.sh &', (error, stdout, stderr) => {
         if (error) {
             console.error(`Error stopping ComfyUI: ${error}`);
         }
