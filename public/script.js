@@ -45,4 +45,16 @@ $(document).ready(function() {
             alert(data);
         });
     });
+
+    $('#stopInvokeAI').click(function () {
+        $.get('/stop_invokeai', function (data) {
+            alert(data);
+        });
+    });
+
+    $('#startInvokeAI').click(function () {
+        $.get('/start_invokeai', function (data) {
+            alert(data);
+        });
+    });
 });

@@ -65,6 +65,26 @@ app.get('/start_comfyui', (req, res) => {
     res.send('Started ComfyUI successfully!');
 });
 
+app.get('/stop_invokeai', (req, res) => {
+    exec('scripts/stop_invokeai.sh &', (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Error stopping InvokeAI: ${error}`);
+        }
+    });
+
+    res.send('Stopped InvokeAI successfully!');
+});
+
+app.get('/start_invokeai', (req, res) => {
+    exec('scripts/start_invokeai.sh &', (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Error starting InvokeAI: ${error}`);
+        }
+    });
+
+    res.send('Started InvokeAI successfully!');
+});
+
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on http://0.0.0.0:${PORT}`);
 });
