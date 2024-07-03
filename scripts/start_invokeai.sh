@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
-cd /workspace/InvokeAI && source venv/bin/activate && nohup invokeai-web > /workspace/logs/invokeai.log 2>&1 &
+export PYTHONUNBUFFERED=1
+cd /workspace/InvokeAI
+source /venvs/invokeai/bin/activate
+nohup invokeai-web > /workspace/logs/invokeai.log 2>&1 &
