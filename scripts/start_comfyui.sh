@@ -12,8 +12,6 @@ python3 main.py \
   --listen 0.0.0.0 \
   --port 7860 \
   --extra-model-paths-config extra_model_paths.yaml \
-  --gpu-only \
-  --highvram \
   --cuda-malloc \
   --fp16-unet \
   --fp16-vae \
