@@ -1,1 +1,1 @@
-# Application Manager for Stable Diffusion RunPod Template
+Thank you to Ashley Kleynhans for leaving their work public for noobs like me to use.
